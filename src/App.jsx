@@ -26,7 +26,7 @@ function App() {
         <QuestionCard question={questions[step]} onSelect={handleAnswer} />
       )}
 
-      <footer>{0.04}</footer>
+      <footer>{"v0.05"}</footer>
     </div>
   
   );

@@ -49,9 +49,31 @@ export const questions = [
     options: [
       { text: "Microsoft Project, Word, Excel", year: 1998 },
       { text: "Jira and Confluence", year: 2008 },
-      { text: "Trello, GitHub, Slack", year: 2015 },
+      { text: "ADO, Trello, GitHub, Slack", year: 2015 },
       { text: "Linear, Notion, Figma", year: 2022 },
       { text: "Custom stack with AI copilots", year: 2025 }
+    ]
+  },
+  {
+    id: 6,
+    text: "How do you define success for your team?",
+    options: [
+      { text: "We deliver on time and under budget", year: 1998 },
+      { text: "We complete our committed work each sprint", year: 2008 },
+      { text: "We ship value that users love", year: 2016 },
+      { text: "We continuously improve and learn", year: 2022 },
+      { text: "We create measurable impact for our customers", year: 2025 }
+    ]
+  },
+  {
+    id: 7,
+    text: "How do you track progress?",
+    options: [
+      { text: "Gantt charts or milestone calendars", year: 1997 },
+      { text: "Burndown charts and sprint velocity", year: 2009 },
+      { text: "Kanban boards with flow metrics", year: 2015 },
+      { text: "Cycle time, DORA metrics, and experiments", year: 2022 },
+      { text: "AI-generated insights from our delivery pipeline", year: 2025 }
     ]
   }
 ];

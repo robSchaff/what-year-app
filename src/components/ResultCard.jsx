@@ -12,7 +12,7 @@ export default function ResultCard({ year, onRestart }) {
 
   return (
     <div>
-      <h2>Your methodology is from {year}</h2>
+      <h2>Your team is living in {year}</h2>
       <p>{summary}</p>
       {song && (
         <p>
