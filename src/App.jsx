@@ -62,9 +62,17 @@ return (
           </div>
         </div>
 
-        <div style={{ minHeight: "220px", display: "flex", alignItems: "center" }}>
+        <div style={{ 
+          minHeight: "220px", 
+          display: "flex", 
+          alignItems: "center",
+          flexDirection: "column",
+          justifyContent: "center",
+          minHeight: "60vh"
+          }}>
+
           <QuestionCard question={questions[step]} onSelect={handleAnswer} />
-      </div>
+        </div>
       </>
     )}
   </div>
