@@ -75,6 +75,16 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1rem;
+  margin: 0.75rem 0;
+}
+
 footer {
   margin-top: 2rem;
   font-size: 0.8rem;
