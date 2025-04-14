@@ -75,4 +75,10 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}
 

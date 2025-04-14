@@ -25,7 +25,10 @@ function App() {
       ) : (
         <QuestionCard question={questions[step]} onSelect={handleAnswer} />
       )}
+
+      <footer>{0.04}</footer>
     </div>
+  
   );
 }
 
