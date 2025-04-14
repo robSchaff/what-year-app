@@ -75,5 +75,16 @@
         { "text": "Cycle time, DORA metrics, and experiments", "year": 2022 },
         { "text": "AI-generated insights from our delivery pipeline", "year": 2025 }
       ]
+    },
+    {
+      "id": 8,
+      "text": "How does your team approach testing?",
+      "options": [
+        { "text": "Mostly manual testing before release", "year": 1998 },
+        { "text": "Automated unit tests for some components", "year": 2007 },
+        { "text": "Comprehensive test automation suite", "year": 2014 },
+        { "text": "Test-driven development (TDD) is our norm", "year": 2018 },
+        { "text": "Testing is continuous and integrated with deployment", "year": 2024 }
+      ]
     }
   ]

@@ -31,7 +31,7 @@ function App() {
           You'll answer 7 quick questions, and we’ll tell you: *What year are you really working in?*
         </p>
         <button onClick={() => setStarted(true)}>Start the Quiz</button>
-        <footer>v0.0.8</footer>
+        <footer>v0.0.9</footer>
       </div>
     );
   }
