@@ -54,6 +54,8 @@ button {
   cursor: pointer;
   width: 100%;
   max-width: 400px;
+  min-height: 44px;
+  line-height: 1.4;
   text-align: center;
   transition: background-color 0.3s;
 }
