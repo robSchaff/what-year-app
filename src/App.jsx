@@ -18,12 +18,15 @@ function App() {
     setAnswers([]);
   };
 
-  if (step >= questions.length) {
-    const year = calculateYear(answers);
-    return <ResultCard year={year} onRestart={restart} />;
-  }
-
-  return <QuestionCard question={questions[step]} onSelect={handleAnswer} />;
+  return (
+    <div className="container">
+      {step >= questions.length ? (
+        <ResultCard year={calculateYear(answers)} onRestart={restart} />
+      ) : (
+        <QuestionCard question={questions[step]} onSelect={handleAnswer} />
+      )}
+    </div>
+  );
 }
 
 export default App;

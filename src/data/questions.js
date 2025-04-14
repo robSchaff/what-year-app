@@ -25,11 +25,33 @@ export const questions = [
     id: 3,
     text: "How do you estimate work?",
     options: [
-      { text: "Detailed hours", year: 2001 },
+      { text: "Detailed hours or days", year: 2001 },
       { text: "Story points", year: 2008 },
       { text: "T-shirt sizing", year: 2014 },
-      { text: "We don’t estimate", year: 2023 }
+      { text: "Small slices, no estimates", year: 2021 },
+      { text: "We don’t estimate", year: 2024 }
+    ]
+  },
+  {
+    id: 4,
+    text: "How does your team handle changing priorities mid-sprint?",
+    options: [
+      { text: "That would cause a meltdown", year: 2002 },
+      { text: "We adjust the sprint backlog", year: 2010 },
+      { text: "We adapt quickly — it’s expected", year: 2016 },
+      { text: "We don’t use sprints anymore", year: 2022 },
+      { text: "Work flows continuously, no stress", year: 2025 }
+    ]
+  },
+  {
+    id: 5,
+    text: "Which tools do you primarily use to manage work?",
+    options: [
+      { text: "Microsoft Project, Word, Excel", year: 1998 },
+      { text: "Jira and Confluence", year: 2008 },
+      { text: "Trello, GitHub, Slack", year: 2015 },
+      { text: "Linear, Notion, Figma", year: 2022 },
+      { text: "Custom stack with AI copilots", year: 2025 }
     ]
   }
-  // You can add more questions later!
 ];
