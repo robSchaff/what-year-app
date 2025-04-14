@@ -5,7 +5,6 @@ import QuestionCard from "./components/QuestionCard";
 import ResultCard from "./components/ResultCard";
 
 function App() {
-  const version = "0.0.8"
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [started, setStarted] = useState(false);
@@ -32,7 +31,7 @@ function App() {
           You'll answer 7 quick questions, and we’ll tell you: *What year are you really working in?*
         </p>
         <button onClick={() => setStarted(true)}>Start the Quiz</button>
-        <footer>version</footer>
+        <footer>v0.0.8</footer>
       </div>
     );
   }
