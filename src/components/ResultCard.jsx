@@ -1,23 +1,9 @@
 import { useState } from "react";
-import { songsByYear } from "../data/songsByYear";
-import { emojisByYear } from "../data/emojisByYear";
+import { getResultDetails } from "../utils/getResultDetails";
+
 export default function ResultCard({ year, onRestart }) {
-  const song = songsByYear[year];
-  const emoji = emojisByYear[year] || "📅";
-
+  const { emoji, summary, song, shareText } = getResultDetails(year);
   const [copied, setCopied] = useState(false);
-
-  const shareText = `${emoji} My team’s methodology is from ${year} — ${getEra(year)}. ${
-    song ? `The #1 song that year was “${song.song}” by ${song.artist}.` : ""
-  } 👉 https://what-year-app.vercel.app`;
-
-  function getEra(year) {
-    if (year < 2001) return "the Waterfall Era";
-    if (year < 2010) return "the Scrum Era";
-    if (year < 2017) return "the DevOps Era";
-    if (year < 2022) return "the Product Thinking Era";
-    return "the AI-enhanced Agile Era";
-  }
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shareText);
@@ -25,45 +11,69 @@ export default function ResultCard({ year, onRestart }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  return (
-    <div>
-      <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{emoji}</h2>
-      <h3>Your methodology is from {year}</h3>
-      <p>{getEra(year)}</p>
-      {song && (
-        <p>
-          🎵 The #1 song that year was <strong>"{song.song}"</strong> by{" "}
-          <strong>{song.artist}</strong>.
-        </p>
-      )}
+  const buttonStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "6px",
+    padding: "10px 20px",
+    fontSize: "1rem",
+    backgroundColor: "#007bff",
+    color: "#fff",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+    margin: "10px auto",
+    width: "fit-content"
+  };
 
-      {/* 🚀 Share Buttons */}
-      <div style={{ marginTop: "2rem" }}>
-        <p><strong>Share your result:</strong></p>
+  return (
+    <div style={{ textAlign: "center" }}>
+    <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{emoji}</h2>
+    <h3>Your methodology is from {year}</h3>
+    <p>{summary}</p>
+
+    {song && (
+      <p style={{ marginTop: "1rem" }}>
+        🎵 The #1 song that year was <strong>"{song.song}"</strong> by{" "}
+        <strong>{song.artist}</strong>.
+      </p>
+    )}
+
+    {/* Share Section */}
+    <div style={{ marginTop: "2rem" }}>
+      <p><strong>Share your result:</strong></p>
+
+      <div style={{ marginBottom: "0.5rem" }}>
         <button
           onClick={copyToClipboard}
-          style={{
-            marginRight: "10px",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "6px"
-          }}
+          style={buttonStyle}
         >
-        📋 {copied ? "Copied!" : "Copy to Clipboard"}
-        {copied && <span style={{ color: "green" }}>✔️</span>}
+          📋 {copied ? "Copied!" : "Copy to Clipboard"}
+          {copied && <span style={{ color: "green" }}>✔️</span>}
         </button>
+      </div>
+
+      <div style={{ marginBottom: "1.5rem" }}>
         <a
           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}
           target="_blank"
           rel="noreferrer"
+          style={{
+            color: "#007bff",
+            textDecoration: "none"
+          }}
         >
-          🐦 Tweet This
+        🐦 Tweet This
         </a>
       </div>
-
-      <button onClick={onRestart} style={{ marginTop: "2rem" }}>
-        🔁 Take it again
-      </button>
     </div>
-  );
+
+    <div style={{ textAlign: "center" }}>
+    <button onClick={onRestart} style={buttonStyle}>
+      🔁 Take it again
+    </button>
+    </div>
+  </div>
+);
 }
