@@ -86,5 +86,16 @@
         { "text": "Test-driven development (TDD) is our norm", "year": 2018 },
         { "text": "Testing is continuous and integrated with deployment", "year": 2024 }
       ]
+    },
+    {
+      "id": 9,
+      "text": "Where does your team work?",
+      "options": [
+        { "text": "We're all in the same building", "year": 1998 },
+        { "text": "We share a Scrum room with task boards", "year": 2006 },
+        { "text": "We're distributed across offices and time zones", "year": 2015 },
+        { "text": "We're remote-first with flexible hours", "year": 2021 },
+        { "text": "We work from anywhere with async collaboration tools", "year": 2024 }
+      ]
     }
   ]

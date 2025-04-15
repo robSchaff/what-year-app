@@ -40,8 +40,17 @@ export default function ResultCard({ year, onRestart }) {
       {/* 🚀 Share Buttons */}
       <div style={{ marginTop: "2rem" }}>
         <p><strong>Share your result:</strong></p>
-        <button onClick={copyToClipboard} style={{ marginRight: "10px" }}>
-          📋 {copied ? "Copied!" : "Copy to Clipboard"}
+        <button
+          onClick={copyToClipboard}
+          style={{
+            marginRight: "10px",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px"
+          }}
+        >
+        📋 {copied ? "Copied!" : "Copy to Clipboard"}
+        {copied && <span style={{ color: "green" }}>✔️</span>}
         </button>
         <a
           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`}

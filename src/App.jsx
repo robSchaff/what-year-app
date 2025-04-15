@@ -29,7 +29,7 @@ function App() {
           This short quiz will assess how your team works today and match it to a software development era — from the waterfall days of the '90s to the AI-enhanced teams of the 2020s.
         </p>
         <p>
-          You'll answer 8 quick questions, and we’ll tell you: *What year are you really working in?*
+          You'll answer 9 quick questions, and we’ll tell you: *What year are you really working in?*
         </p>
         <button onClick={() => setStarted(true)}>Start the Quiz</button>
         <footer>v0.0.10</footer>
